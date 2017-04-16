@@ -1,0 +1,39 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction:column;
+    background-color: #374047;
+}
+.jumbotron{
+    width:80%;
+    margin: 8em 10% 0;
+}
+
+.chat_conversion {
+    width: 40%;
+    margin-left: 30%;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    background-color: rgba(255,255,255,0.2);
+}
+.chat_conversion form > p > textarea{
+    background-color: #ccc;
+    font-size: 0.725em;
+    color: #222;
+    padding:0.2em 0.3em;
+}
+.chat_conversion form > p > textarea,
+.chat_conversion form > p > input{
+    width: 100%;
+}
+
+.user {
+    color: seagreen;
+}
