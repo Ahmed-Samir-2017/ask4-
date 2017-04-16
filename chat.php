@@ -40,10 +40,16 @@
             xhr.open("GET", "ajax.php?email=" + email + "&message=" + message.trim(), true);
             xhr.send();
         }
-
-        (function () {
-            setInterval(ajax, 1000);
-        }());
+        setInterval(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if(xhr.status== 200 && xhr.readyState == 4){
+                    document.getElementById('messs').innerHTML = xhr.responseText ;
+                }
+            };
+            xhr.open("GET", "ajax.php", true);
+            xhr.send();
+        }, 1000);
     </script>
 </body>
 </html>

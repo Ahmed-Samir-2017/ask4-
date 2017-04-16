@@ -1,12 +1,12 @@
 <?php
+    session_start();
+    ob_start();
     if(isset($_SESSION['email'])) {
         if ($_SESSION['email'] != "") {
             header("Location: chat.php");
             exit;
         }
     }
-    session_start();
-    ob_start();
     $_SESSION['sub'] = false ;
     if (isset($_POST['email'])) {
         $_SESSION['email'] = $_POST['email'];

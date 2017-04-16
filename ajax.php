@@ -5,8 +5,10 @@
     });
 
     $ob = new Database();
-    if($_REQUEST['message'] != ""){
-        $ob->insertRow("INSERT INTO message(reported, message) VALUES (?,?)", [$_REQUEST['email'], $_REQUEST['message']]);
+    if(isset($_REQUEST['message'])){
+        if($_REQUEST['message'] != ""){
+            $ob->insertRow("INSERT INTO message(reported, message) VALUES (?,?)", [$_REQUEST['email'], $_REQUEST['message']]);
+        }
     }
     $stmt = $ob->getRows("SELECT * FROM message");
     /*
